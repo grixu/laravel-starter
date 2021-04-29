@@ -1,7 +1,7 @@
 {
     "name": "grixu/laravel-starter",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Domain-oriented template for Laravel Framework.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
