@@ -2,25 +2,31 @@
     "name": "grixu/laravel-starter",
     "type": "project",
     "description": "Domain-oriented template for Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": ["framework", "laravel", "template"],
     "license": "MIT",
     "require": {
         "php": "^8.0",
+        "aws/aws-sdk-php": "^3.191",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "laravel-lang/lang": "~8.0",
-        "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5"
+        "guzzlehttp/guzzle": "^7.4",
+        "laravel-lang/lang": "~10.0",
+        "laravel/framework": "^8.77",
+        "laravel/tinker": "^2.6"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
         "facade/ignition": "^2.5",
-        "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.5",
-        "mockery/mockery": "^1.4.2",
+        "fakerphp/faker": "^1.9",
+        "friendsofphp/php-cs-fixer": "^3.4",
+        "laravel/sail": "^1.12",
+        "mockery/mockery": "^1.4",
         "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3.3",
-        "spatie/laravel-ray": "^1.17"
+        "nunomaduro/larastan": "^1.0.1",
+        "nunomaduro/phpinsights": "^2.0",
+        "phpunit/phpunit": "^9.5",
+        "spatie/laravel-ray": "^1.27",
+        "spatie/x-ray": "^1.1"
     },
     "autoload": {
         "psr-4": {
@@ -46,7 +52,11 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "insights": "php artisan insights",
+        "cs": "vendor/bin/php-cs-fixer fix src",
+        "stan": "vendor/bin/phpstan analyse",
+        "xray": "vendor/bin/x-ray src"
     },
     "extra": {
         "laravel": {
